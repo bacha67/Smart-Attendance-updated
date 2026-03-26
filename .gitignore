@@ -65,3 +65,42 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Large dataset folders
+backend/dataset/
+backend/venv/
+backend/venv311/
+
+# ML models (large binary files)
+backend/models/
+models/
+
+# Documentation
+SmartAttendance_Project_Documentation.md
+STUDENT_COURSES_ASSIGNMENT_FIX.md
+
+# Python cache in subdirs
+backend/__pycache__/
+utils/__pycache__/
+
+# Backup blueprints
+backend/blueprints/*_backup.py
+backend/blueprints/*_fixed.py
+
+# One-off scripts
+backend/add_*.py
+backend/check_*.py
+backend/cleanup_*.py
+backend/diagnose_*.py
+backend/fix_*.py
+backend/migrate_*.py
+backend/rebuild_*.py
+backend/restore_*.py
+backend/test_*.py
+backend/train_*.py
+backend/update_*.py
+backend/verify_*.py
+backend/prepare_*.py
+backend/generate_*.py
+backend/seed_mysql_database.py
+backend/minimal_app.py

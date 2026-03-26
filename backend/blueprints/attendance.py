@@ -445,23 +445,21 @@ def recognize_face():
             session_section = session.get('section_id', '')
             session_year = session.get('year', '')
             
-            if student_section != session_section or student_year != session_year:
-                print(f"✗ SECTION/YEAR MISMATCH:")
+            if session_section and student_section != session_section:
+                print(f"✗ SECTION MISMATCH:")
                 print(f"  Student: {student.get('name')} ({student_id})")
-                print(f"  Student Section/Year: {student_section}, {student_year}")
-                print(f"  Session Section/Year: {session_section}, {session_year}")
+                print(f"  Student Section: {student_section}")
+                print(f"  Session Section: {session_section}")
                 print(f"  → REJECTED: Student not in this class")
                 sys.stdout.flush()
                 
                 return jsonify({
                     'status': 'wrong_section',
-                    'message': f'{student.get("name")} is not in this class (Section {student_section}, {student_year})',
+                    'message': f'{student.get("name")} is not in this class (Section {student_section})',
                     'student_id': student_id,
                     'student_name': student.get('name'),
                     'student_section': student_section,
-                    'student_year': student_year,
                     'session_section': session_section,
-                    'session_year': session_year
                 }), 200
             
             print(f"✓ Section/Year validated: {student_section}, {student_year}")
