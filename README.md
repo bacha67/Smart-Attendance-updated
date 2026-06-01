@@ -1,4 +1,4 @@
-# 🚀 SmartAttendance — Face Recognition Attendance System
+#  SmartAttendance  Face Recognition Attendance System
 
 A modern, AI-powered attendance management system that automates student attendance using real-time face recognition. Built with a scalable full-stack architecture using Flask (backend) and React (frontend).
 
